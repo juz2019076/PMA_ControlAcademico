@@ -1,13 +1,14 @@
-const mongoose = require('mongoose');
+const moongose = require('mongoose'); 
 
-const dbConnection = async () => {
+const dbConnection = async ()=>{
     try{
-        await mongoose.connect(process.env.MONGODB_CNN, {});
-        console.log('Base de datos conectada');
+        await moongose.connect(process.env.MONGODB_CNN, {});
+        console.log('Base de datos conectada existosamente');
     }catch(e){
-        throw new Error('Error al conectar la base de datos ', e)
+        throw new Error('Error al conectar a la base de datos', e);
+
     }
-}
+};
 
 module.exports = {
     dbConnection

@@ -1,0 +1,52 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Estudiantes",
+    "dateExported": "2024-02-26T03:20:59.305Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "579fbd30-2a2c-48ab-b349-22097be9a608",
+            "colId": "bde26d30-9880-49a5-acef-821bec49ef0c",
+            "containerId": "",
+            "name": "estudiantePut",
+            "url": "http://localhost:3000/api/estudiante/perfil-edit",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-02-25T04:16:26.994Z",
+            "modified": "2024-02-26T03:15:34.091Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGMwMWFhZTM2MGM2OTJiY2MxZTM5MSIsImlhdCI6MTcwODkxNzE3NX0.IwXBIjIzsaJloSBG0xqJyY90ViMc-HK2BVzk0jECNuA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"hola54\",\n  \"correo\": \"kinalito@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "02d6360e-cd64-4e7e-ad58-fcc0ffe5ddcc",
+            "colId": "bde26d30-9880-49a5-acef-821bec49ef0c",
+            "containerId": "",
+            "name": "estudianteDelete",
+            "url": "http://localhost:3000/api/estudiante/perfil-delete",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-02-25T04:24:33.997Z",
+            "modified": "2024-02-26T03:15:52.375Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGMwMWFhZTM2MGM2OTJiY2MxZTM5MSIsImlhdCI6MTcwODkxNzE3NX0.IwXBIjIzsaJloSBG0xqJyY90ViMc-HK2BVzk0jECNuA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
