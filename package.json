@@ -1,22 +1,14 @@
 {
-  "name": "laboratorio-ps-2",
+  "name": "pma_controlacademico",
   "version": "1.0.0",
-  "description": "Proyecto control academico.",
+  "description": "PMA Laboratorio PS # 2",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/msuyen2022501/Laboratorio-PS-2.git"
-  },
-  "author": "Mario David Suyén Girón",
+  "author": "Fabricio Uz",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/msuyen2022501/Laboratorio-PS-2/issues"
-  },
-  "homepage": "https://github.com/msuyen2022501/Laboratorio-PS-2#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
