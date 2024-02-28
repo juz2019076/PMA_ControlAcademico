@@ -1,41 +1,41 @@
-const express = require('express');
-const cors = require('cors');
-const { dbConnection } = require('../db/config');
+  const express = require('express');
+  
+  const cors = require('cors'); 
 
-class Server {
-    constructor() {
+  const { dbConnection } = require('../db/config');
+
+  class Server{
+    constructor(){
         this.app = express();
-        this.port = process.env.PORT || 5000;
-        this.usuariosPath = '/laboratorio-ps-2/usuarios';
-        this.cursosPath = '/laboratorio-ps-2/cursos';
-        this.estudiantesPath = '/laboratorio-ps-2/estudianteCursos'
-
+        this.port = process.env.PORT;
+        this.estudiantePath = '/api/estudiante'
+        this.authPath = '/api/auth'
+        this.cursoPath = '/api/curso'
         this.conectarDB();
         this.middlewares();
-        this.routes();
+       this.routes();  
     }
 
-    async conectarDB() {
+    async conectarDB(){
         await dbConnection();
     }
-
-    middlewares() {
+    middlewares(){
         this.app.use(express.static('public'));
         this.app.use(cors());
         this.app.use(express.json());
     }
-
-    routes() {
-        this.app.use(this.usuariosPath, require('../routes/user.routes'));
-        this.app.use(this.cursosPath, require('../routes/cursos.routes'));
-        this.app.use(this.estudiantesPath, require('../routes/usuarioCurso.routes'));
+    routes(){
+        this.app.use(this.estudiantePath, require('../routes/estudiante.routes'));
+        this.app.use(this.authPath, require('../routes/auth.routes'));
+        this.app.use(this.cursoPath, require ('../routes/curso.routes'));
     }
 
-    listen() {
-        this.app.listen(this.port, () => {
+    listen(){
+        this.app.listen(this.port, () =>{
             console.log('Servidor ejecutado y escuchando en el puerto', this.port);
         });
     }
-}
 
-module.exports = Server;
+  }
+
+  module.exports = Server;
